@@ -32,7 +32,7 @@ for i = areaWidth,1,-1 do
     
     for i = areaLength,1,-1 do -- `i` how many times left to run -- 
     
-    write("times left, length: " .. i "\n")
+    write("times left, length: " .. i .. "\n")
     turtle.place()
     
         for i = placeInterval,1,-1 do -- go forward for placeInterval --
@@ -41,17 +41,20 @@ for i = areaWidth,1,-1 do
         end
     end
 
+    turtle.turnRight()
+
     for i = placeInterval,1,-1 do
         -- move right placeInterval blocks --
-        turtle.turnRight()
         turtle.forward()
-        turtle.turnRight()
-        
     end 
+
+    turtle.turnLeft()
 
     -- return sequence --
     for i = areaLength,1,-1 do
-        for i = placeInterval,1,-1, do
+        write("beginning line-return sequence")
+
+        for i = placeInterval,1,-1 do
             turtle.forward()
         
         end
