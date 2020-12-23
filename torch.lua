@@ -16,7 +16,7 @@ write("\nMake sure turtle is fueled and has torches in slot 1\n")
 write("areaLength:") -- length of area to torch --
 local areaLength = read()
 
-write("areaWidth") -- width of area to torch --
+write("areaWidth:") -- width of area to torch --
 local areaWidth = read()
 
 write("placeInterval:") -- interval between torch placement --
@@ -37,7 +37,7 @@ for i = areaWidth,1,-1 do
     
         for i = placeInterval,1,-1 do -- go forward for placeInterval --
             turtle.forward()
-
+    
         end
     end
 
@@ -52,8 +52,6 @@ for i = areaWidth,1,-1 do
 
     -- return sequence --
     for i = areaLength,1,-1 do
-        write("beginning line-return sequence")
-
         for i = placeInterval,1,-1 do
             turtle.forward()
         
@@ -62,6 +60,7 @@ for i = areaWidth,1,-1 do
         -- turn around, to face correct direction
         turtle.turnLeft()
         turtle.turnLeft()
+
 
     end    
 
